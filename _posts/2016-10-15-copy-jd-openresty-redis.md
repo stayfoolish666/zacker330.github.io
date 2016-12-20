@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "模拟京东使用Openresty+Redis做读服务"
+title: "模仿京东使用Openresty+Redis做读服务"
 description: "直接在Nginx上开发web应用是怎么一回事？"
 date: 2016-10-15
 tags: [Nginx, Openresty, Lua, Redis, lua-resty-template, lua-resty-redis]
