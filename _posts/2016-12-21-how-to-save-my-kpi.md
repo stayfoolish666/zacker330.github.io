@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "似乎大多数人都理解错了KPI"
+title: "似乎百分之七十的人都理解错了KPI"
 description: "KPI的自我救赎"
 date: 2016-12-21
 tags: [KPI, Management, 企业管理]
