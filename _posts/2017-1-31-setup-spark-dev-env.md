@@ -50,6 +50,9 @@ Spark不是一框架，而是一个分布式的计算平台。所以，你不能
 同时，这样，还能实现：统一开发环境与生产环境使用同样或相近的机器环境。
 
 以下是一个[Vagrantfile样例](https://github.com/bigdata-labs/spark2-hadoop2.6-hbase-labs/blob/master/Vagrantfile)：
+
+
+
 ```
 Vagrant.configure(2) do |config|
   VAGRANT_VM_PROVIDER = "virtualbox"
