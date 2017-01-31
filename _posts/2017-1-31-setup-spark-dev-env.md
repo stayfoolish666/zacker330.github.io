@@ -15,7 +15,7 @@ share: true
 
 我们真的需要买6台机器吗？当然不是，我们只需要在自己的电脑上虚拟化出6台就好了。而我的电脑只有16G，虚拟化6台太吃力了。最终，我决定搭建成以下结构：
 
-![spark-hadoop-hbase]({{ site.baseurl }}/assets/images/spark-hadoop-hbase.png)
+![spark-hadoop-hbase]({{ site.baseurl }}/assets/images/spark-hadoop-hbase.jpg)
 
 
 
