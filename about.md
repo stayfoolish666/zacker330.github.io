@@ -5,13 +5,9 @@ permalink: /about/
 
 #### 翟志军
 
-喜欢思考的程序员。
-
-##### gitosc
-http://git.oschina.net/zacker330
+如果你觉得我还行，可以联系我，我正在找合适的工作。apl.359 AT 163.com
 
 ##### github
 https://github.com/zacker330
 
-#### 联系我
-apl.359 AT 163.com
+
