@@ -4,8 +4,8 @@ title: "关于“以结果为导向”的管理方式的碎碎语"
 description: "为什么要以结果为导向？"
 date: 2017-1-20
 tags: [管理]
-comments: false
-share: false
+comments: true
+share: true
 ---
 
 **_先申明：我反驳“以结果为导向”的某些理由，并不代表我认为管理应该不制定目标，管理不应该有结果。_**

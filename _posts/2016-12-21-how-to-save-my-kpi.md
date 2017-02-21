@@ -4,8 +4,8 @@ title: "似乎百分之七十的人都理解错了KPI"
 description: "KPI的自我救赎"
 date: 2016-12-21
 tags: [KPI, Management, 企业管理]
-comments: false
-share: false
+comments: true
+share: true
 ---
 >**关键绩效指标**（英语：Key Performance Indicators，简称**KPI**），又称**主要绩效指标**、**重要绩效指标**、**绩效评核指标**等，是指衡量一个管理工作成效最重要的指标，是一项[数据化](https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E5%8C%96)管理的工具，必须是客观、可衡量的[绩效指标](https://zh.wikipedia.org/w/index.php?title=%E7%B8%BE%E6%95%88%E6%8C%87%E6%A8%99&action=edit&redlink=1)。这个名词往往用于[财政](https://zh.wikipedia.org/wiki/%E8%B4%A2%E6%94%BF)、一般[行政](https://zh.wikipedia.org/wiki/%E8%A1%8C%E6%94%BF)事务的衡量。是将公司、员工、事务在某时期表现[量化](https://zh.wikipedia.org/wiki/%E9%87%8F%E5%8C%96)与[质化](https://zh.wikipedia.org/wiki/%E8%B3%AA%E5%8C%96)的一种指标。可协助将优化[组织](https://zh.wikipedia.org/wiki/%E7%B5%84%E7%B9%94)表现，并规划愿景。
 

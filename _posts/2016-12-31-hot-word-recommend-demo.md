@@ -4,8 +4,8 @@ title: "一个热词推荐的简单实现"
 description: ""
 date: 2016-12-31
 tags: [热词推荐]
-comments: false
-share: false
+comments: true
+share: true
 ---
 
 #### 为什么想做这个东西
