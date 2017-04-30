@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "耦合的本质"
-description: "你的理解什么是耦合了？"
+description: "你真理解什么是耦合了？"
 date: 2015-12-29
 tags: [耦合, 软件开发]
 comments: true
