@@ -18,10 +18,10 @@ google-analytics:
 
 # Disqus
 disqus:
-  id:               "your-id"
+  id:               "showme-codes"
 
 # URL
-url:                "https://zacker330.github.io"
+url:                "https://showme.codes"
 #url:               "localhost:4000"
 baseurl:            ""
 
@@ -49,6 +49,8 @@ nav:
     url:            "/tags"
   - name:           "Github"
     url:            "https://github.com/zacker330"
+  - name:           "老博客"  
+    url:            "https://my.oschina.net/zjzhai"
 
 
 

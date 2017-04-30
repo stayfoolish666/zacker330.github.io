@@ -1,5 +1,7 @@
 ---
 layout: default
+wepay: true
+comments: true
 ---
 <header>
   <h1 class="header-small">
@@ -27,15 +29,21 @@ layout: default
   {{ content }}
 
 
+  {% if page.comments != false  %}
+  {% include disqus.html %}
+  {% endif %}
+
+  <p>
+  <b>End</b>
   {% if page.share != false %}
   <div class="post-share">
     <hr>
     {% include share.html %}
   </div>
   {% endif %} 
-
-  {% if page.comments != false  %}
-  {% include duoshuo.html %}
-  {% endif %}
-
+  {% if page.wepay != false  %}
+    <hr>
+  <b>为你的收获买单</b>
+  <img src="{{ site.baseurl }}/assets/images/WechatIMG1.jpeg" width="240px" height="340px"/>
+  {% endif %} 
 </div>

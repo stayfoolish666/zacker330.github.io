@@ -5,7 +5,7 @@ permalink: /about/
 
 #### 翟志军
 
-程序员
+持续关注如何提升软件研发效率的程序员
 
-##### github
-https://github.com/zacker330
+[github](https://github.com/zacker330)
+
