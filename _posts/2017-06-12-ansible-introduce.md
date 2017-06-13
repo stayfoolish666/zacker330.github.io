@@ -54,7 +54,7 @@ tar -zxf apache-tomcat-8.5.15.tar.gz
 112.112.112.112
 ....
 ```
-而这些ip的配置：
+而这些ip的配置写在一种被称为playbook的YAML文件中：
 ```
 ---
 - hosts: tomcat-servers
