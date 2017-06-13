@@ -24,7 +24,9 @@ share: true
 想像一下，你要在一台新的机器上安装Tomcat，你会怎么样呢，条件反射的：
 ```
 ssh user@111.111.111.111
-wget -c http://apache.fayea.com/tomcat/tomcat-8/v8.5.15/bin/apache-tomcat-8.5.15.tar.gz
+
+wget -c http://apache.fayea.com/tomcat/tomcat-8.5.15.tar.gz
+
 tar -zxf apache-tomcat-8.5.15.tar.gz
 .....省略
 ```
@@ -37,7 +39,9 @@ tar -zxf apache-tomcat-8.5.15.tar.gz
 
 同时，如果是人工执行100次，那么失误是难免的！自动化运维工具会严格根据我们所给指令来执行，而不会因为失恋而手抖执行了：`sudo rm -rf /`。
 
-不少人反对自动化，认为那样太危险，因为一不小心就在上百台机器删错文件。显然，他们没有注意到：自动化实现的是**准确地执行指令**，解决人类执行任务时存在的指令理解不正确、执行不严格的问题。而机器不会。没有达到预期效果，往往是我们人类下达的指令不正确。
+不少人反对自动化，认为那样太危险，因为一不小心就在上百台机器删错文件。显然，他们没有注意到：自动化实现的是**准确地执行指令**，解决人类执行任务时存在的指令理解不正确、执行不严格的问题。而机器不会出现这些问题的概念几乎为零。
+
+没有达到预期效果，往往是我们人类下达的指令不正确。
 
 所以，Ansible还解决了**人执行指令不准确**的问题。
 
@@ -61,8 +65,9 @@ tar -zxf apache-tomcat-8.5.15.tar.gz
   tasks:
     - name: download tomcat
       get_url:
-          url: http://apache.fayea.com/tomcat/tomcat-8/v8.5.15/bin/apache-tomcat-8.5.15.tar.gz
+          url: http://apache.fayea.com/tomcat/tomcat-8.5.15.tar.gz
           dest: /tmp
+          
     - name: unarchive tomcat to /usr/local
       unarchive:
           src: /tmp/apache-tomcat-8.5.15.tar.gz
