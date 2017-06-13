@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ansible: 简单易懂的自动化运维工具（一）"
+title: "简单易懂Ansible系列 —— 解决了什么"
 description: ""
 date: 2017-06-12
 tags: [Ansible,自动化运维]
@@ -18,7 +18,7 @@ share: true
 
 此文为“Ansible: 简单易懂的自动化运维工具”系列文章的开篇 —— Ansible解决了什么问题
 
-## Ansible解决了什么问题
+## Ansible解决了什么
 首先，它是一个运维工具。当然要解决运维过程中遇到的问题了。运维过程遇到了什么问题？
 
 想像一下，你要在一台新的机器上安装Tomcat，你会怎么样呢，条件反射的：
