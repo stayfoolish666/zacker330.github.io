@@ -67,6 +67,7 @@ tar -zxf apache-tomcat-8.5.15.tar.gz
       unarchive:
           src: /tmp/apache-tomcat-8.5.15.tar.gz
           dest: /usr/local/
+          remote_src: true
 .....省略
 ```
 如果你想再添加100台机器，你需要做的，也只是在inventory文件里添加100个ip，再执行一遍ansible-playbook命令。
