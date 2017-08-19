@@ -16,10 +16,10 @@ share: true
 
 同时，你还必须设置`~/.ssh/config`，以防止登录时不停的问yes or no：
 
-  ```
-  Host *
-      StrictHostKeyChecking no
-  ```
+    ```yml
+    Host *
+        StrictHostKeyChecking no
+    ```
 
 完了，还要设置这个文件的权限为**400**。
 
@@ -32,78 +32,78 @@ share: true
 ### 在name node机器上执行task如下
 1. 创建用户的时候生成ssh_key：
 
-  ```
-  - name: create hadoop user
-    user:
-      name: "{{hadoop_user}}"
-      group: "{{hadoop_group}}"
-      createhome: yes
-      generate_ssh_key: yes
-      ssh_key_bits: 2048
-      ssh_key_file: .ssh/id_rsa
-    tags:
-      - hadoop
-  ```
+    ```yml
+    - name: create hadoop user
+      user:
+        name: "{{hadoop_user}}"
+        group: "{{hadoop_group}}"
+        createhome: yes
+        generate_ssh_key: yes
+        ssh_key_bits: 2048
+        ssh_key_file: .ssh/id_rsa
+      tags:
+        - hadoop
+    ```
 2. 将id_rsa.pub拉取到ansible执行机器上
 
-  ```
-  - name: fetch public key
-    fetch:
-      src: "/home/{{hadoop_user}}/.ssh/id_rsa.pub"
-      dest: /tmp/
-      flat: yes
-    tags:
-      - hadoop
+    ```yml
+    - name: fetch public key
+      fetch:
+        src: "/home/{{hadoop_user}}/.ssh/id_rsa.pub"
+        dest: /tmp/
+        flat: yes
+      tags:
+        - hadoop
 
-  ```
+    ```
 3. 设置`StrictHostKeyChecking no`
 因为我们只想修改这个用户的ssh行为，所以我们的ssh的配置只是针对当前这个用户的：
 
-  ```
-  - name: namenode ssh config
-    template:
-      src: ssh.conf
-      dest: "{{hadoop_user_home}}/.ssh/config"
-      mode: "400"
-      owner: "{{ hadoop_user }}"
-      group: "{{ hadoop_group }}"
-    tags:
-      - hadoop
+    ```yml
+    - name: namenode ssh config
+      template:
+        src: ssh.conf
+        dest: "{{hadoop_user_home}}/.ssh/config"
+        mode: "400"
+        owner: "{{ hadoop_user }}"
+        group: "{{ hadoop_group }}"
+      tags:
+        - hadoop
 
-  ```
+    ```
 **ssh.conf** 的内容如下：
 
-  ```
-  Host *
-    StrictHostKeyChecking no
-  ```
+    ```yml
+    Host *
+      StrictHostKeyChecking no
+    ```
 
 
 
 ### 在data node机器上执行的task如下
 1. 将public key加入到data node的机器中，`/tmp/id_rsa.pub`就是刚由name node机器生成将拉取到本地的key
 
-  ```
-  ## 此时，会在data node机器中相应的用户目录的.ssh文件夹中生成authorized_keys文件，并将public key内容放到里面
-  - name: add master public key to slaves
-    authorized_key:
-      user: "{{hadoop_user}}"
-      key: "{{ lookup('file', '/tmp/id_rsa.pub') }}"
-    tags:
-      - hadoop
+    ```yml
+    ## 此时，会在data node机器中相应的用户目录的.ssh文件夹中生成authorized_keys文件，并将public key内容放到里面
+    - name: add master public key to slaves
+      authorized_key:
+        user: "{{hadoop_user}}"
+        key: "{{ lookup('file', '/tmp/id_rsa.pub') }}"
+      tags:
+        - hadoop
 
-  ```
+    ```
 2. 设置.ssh目录的权限为700
 不清楚为什么authorized_key模块自动生成的.ssh的权限过高，所以还需要将目录设置成700：
 
-  ```
-  - name: make .ssh folder 700
-    file:
-      path: "{{hadoop_user_home}}/.ssh/"
-      state: directory
-      mode: "700"
-      owner: "{{ hadoop_user }}"
-      group: "{{ hadoop_group }}"
-    tags:
-      - hadoop
-  ```
+    ```yml
+    - name: make .ssh folder 700
+      file:
+        path: "{{hadoop_user_home}}/.ssh/"
+        state: directory
+        mode: "700"
+        owner: "{{ hadoop_user }}"
+        group: "{{ hadoop_group }}"
+      tags:
+        - hadoop
+    ```
