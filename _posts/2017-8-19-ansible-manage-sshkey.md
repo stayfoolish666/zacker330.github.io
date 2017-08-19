@@ -15,10 +15,11 @@ share: true
 1. 将public key copy到所有的data node节点上：ssh-copy-id slave1
 
 同时，你还必须设置`~/.ssh/config`，以防止登录时不停的问yes or no：
-```
-Host *
-    StrictHostKeyChecking no
-```
+
+  ```
+  Host *
+      StrictHostKeyChecking no
+  ```
 
 完了，还要设置这个文件的权限为**400**。
 
@@ -57,6 +58,7 @@ Host *
   ```
 3. 设置`StrictHostKeyChecking no`
 因为我们只想修改这个用户的ssh行为，所以我们的ssh的配置只是针对当前这个用户的：
+
   ```
   - name: namenode ssh config
     template:
@@ -70,6 +72,7 @@ Host *
 
   ```
 **ssh.conf** 的内容如下：
+
   ```
   Host *
     StrictHostKeyChecking no
@@ -79,6 +82,7 @@ Host *
 
 ### 在data node机器上执行的task如下
 1. 将public key加入到data node的机器中，`/tmp/id_rsa.pub`就是刚由name node机器生成将拉取到本地的key
+
 
   ```
   ## 此时，会在data node机器中相应的用户目录的.ssh文件夹中生成authorized_keys文件，并将public key内容放到里面
@@ -93,14 +97,15 @@ Host *
 
 2. 设置.ssh目录的权限为700
 不清楚为什么authorized_key模块自动生成的.ssh的权限过高，所以还需要将目录设置成700：
-```
-- name: make .ssh folder 700
-  file:
-    path: "{{hadoop_user_home}}/.ssh/"
-    state: directory
-    mode: "700"
-    owner: "{{ hadoop_user }}"
-    group: "{{ hadoop_group }}"
-  tags:
-    - hadoop
-```
+
+  ```
+  - name: make .ssh folder 700
+    file:
+      path: "{{hadoop_user_home}}/.ssh/"
+      state: directory
+      mode: "700"
+      owner: "{{ hadoop_user }}"
+      group: "{{ hadoop_group }}"
+    tags:
+      - hadoop
+  ```
