@@ -31,7 +31,6 @@ share: true
 
 ### 在name node机器上执行task如下
 1. 创建用户的时候生成ssh_key：
-
   ```
   - name: create hadoop user
     user:
@@ -45,7 +44,6 @@ share: true
       - hadoop
   ```
 2. 将id_rsa.pub拉取到ansible执行机器上
-
   ```
   - name: fetch public key
     fetch:
@@ -58,7 +56,6 @@ share: true
   ```
 3. 设置`StrictHostKeyChecking no`
 因为我们只想修改这个用户的ssh行为，所以我们的ssh的配置只是针对当前这个用户的：
-
   ```
   - name: namenode ssh config
     template:
@@ -72,7 +69,6 @@ share: true
 
   ```
 **ssh.conf** 的内容如下：
-
   ```
   Host *
     StrictHostKeyChecking no
@@ -82,8 +78,6 @@ share: true
 
 ### 在data node机器上执行的task如下
 1. 将public key加入到data node的机器中，`/tmp/id_rsa.pub`就是刚由name node机器生成将拉取到本地的key
-
-
   ```
   ## 此时，会在data node机器中相应的用户目录的.ssh文件夹中生成authorized_keys文件，并将public key内容放到里面
   - name: add master public key to slaves
@@ -94,10 +88,8 @@ share: true
       - hadoop
 
   ```
-
 2. 设置.ssh目录的权限为700
 不清楚为什么authorized_key模块自动生成的.ssh的权限过高，所以还需要将目录设置成700：
-
   ```
   - name: make .ssh folder 700
     file:
