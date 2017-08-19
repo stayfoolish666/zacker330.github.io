@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "简单易懂Ansible系列 —— 使用Ansible实现ssh key主机之间复制"
+title: "简单易懂Ansible系列 —— 实现ssh key主机之间复制"
 description: ""
 date: 2017-8-19
 tags: [ansible,devops]
