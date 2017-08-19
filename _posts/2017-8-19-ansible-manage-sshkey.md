@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "使用Ansible实现ssh key主机之间复制"
+title: "简单易懂Ansible系列 —— 使用Ansible实现ssh key主机之间复制"
 description: ""
 date: 2017-8-19
 tags: [ansible,devops]
@@ -80,16 +80,16 @@ Host *
 ### 在data node机器上执行的task如下
 1. 将public key加入到data node的机器中，`/tmp/id_rsa.pub`就是刚由name node机器生成将拉取到本地的key
 
-```
-## 此时，会在data node机器中相应的用户目录的.ssh文件夹中生成authorized_keys文件，并将public key内容放到里面
-- name: add master public key to slaves
-  authorized_key:
-    user: "{{hadoop_user}}"
-    key: "{{ lookup('file', '/tmp/id_rsa.pub') }}"
-  tags:
-    - hadoop
+  ```
+  ## 此时，会在data node机器中相应的用户目录的.ssh文件夹中生成authorized_keys文件，并将public key内容放到里面
+  - name: add master public key to slaves
+    authorized_key:
+      user: "{{hadoop_user}}"
+      key: "{{ lookup('file', '/tmp/id_rsa.pub') }}"
+    tags:
+      - hadoop
 
-```
+  ```
 
 2. 设置.ssh目录的权限为700
 不清楚为什么authorized_key模块自动生成的.ssh的权限过高，所以还需要将目录设置成700：
