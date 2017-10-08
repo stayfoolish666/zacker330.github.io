@@ -7,6 +7,7 @@ tags: [Ansible,ChatOps,DevOps]
 comments: true
 share: true
 ---
+![image.png]({{ site.baseurl }}/assets/images/292372-9f8cdc1cc6e15975.png)
 
 ChatOps概念在国内已经有一些文章谈过，但是都处于理论范畴。而本文则是一篇ChatOps实践的文章。
 
@@ -136,7 +137,7 @@ RocketChat默认用户rocket.cat作为运维机器人，这里需要注意的是
 1. 验证
      因为我们安装了[hubot-friendly](git@github.com:grantbowering/hubot-friendly.git)脚本，hey一下hubot，它有回应，就说明我们成功集成了RocketChat和Hubot。
 
-      ![rocketchat-hubot.gif]({{ site.baseurl }}/assets/images/292372-80d343ced42b4493.gif?imageMogr2/auto-orient/strip)
+      ![rocketchat-hubot.gif]({{ site.baseurl }}/assets/images/292372-80d343ced42b4493.gif)
 
 
 ### Hubot与Jenkins集成
