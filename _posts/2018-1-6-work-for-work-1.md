@@ -8,7 +8,7 @@ comments: true
 share: true
 ---
 
-!(coding)[{{ site.baseurl }}/assets/images/292372-ae08cceed4d9122c.png]
+![coding]({{ site.baseurl }}/assets/images/292372-ae08cceed4d9122c.png)
 
 #### 问自己：想象你自己离开目前这家公司，你还能去哪？
 如果你发现，你只有和这家公司流程、政治、上下文等等强相关的能力，那么，你也只能靠“办公室政治”保留住自己的位子。因为，离开了这家公司，你什么也不是。
