@@ -2,7 +2,7 @@
 layout: post
 title: "一个软件工程师对职场、管理、企业的思考之一"
 description: "一个软件工程师的思考"
-date: 2017-11-22
+date: 2018-01-06
 tags: [职场,管理]
 comments: true
 share: true
