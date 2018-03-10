@@ -219,6 +219,6 @@ db.password = passwordprod
 而利用 Ansible 的分组概念同时加上它的自动化，就可以很轻松地解决多环境的配置管理问题，同时又降低我们的研发成本。
 
 ### 扩展
-[Ansible doc](http://docs.ansible.com/ansible/latest/index.html)
-[关于自动化配置还有什么好说的呢？](https://showme.codes/2016-08-12/automation-configuration/) 我的另一篇关于自动化配置的文章
-[Puppet，Chef，Ansible的共性](https://showme.codes/2016-01-02/the-nature-of-ansible-puppet-chef/)
+* [关于自动化配置还有什么好说的呢？](https://showme.codes/2016-08-12/automation-configuration/) 我的另一篇关于自动化配置的文章
+* [Puppet，Chef，Ansible的共性](https://showme.codes/2016-01-02/the-nature-of-ansible-puppet-chef/)
+* [Ansible doc](http://docs.ansible.com/ansible/latest/index.html)
