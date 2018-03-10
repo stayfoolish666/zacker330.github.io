@@ -221,3 +221,4 @@ db.password = passwordprod
 ### 扩展
 [Ansible doc](http://docs.ansible.com/ansible/latest/index.html)
 [关于自动化配置还有什么好说的呢？](https://showme.codes/2016-08-12/automation-configuration/) 我的另一篇关于自动化配置的文章
+[Puppet，Chef，Ansible的共性](https://showme.codes/2016-01-02/the-nature-of-ansible-puppet-chef/)
