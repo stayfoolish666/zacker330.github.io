@@ -2,7 +2,7 @@
 layout: post
 title: "巧用 Ansible 实现配置管理：多环境配置问题"
 description: "配置管理是本书其他内容的基础。没有配置管理，根本谈不上持续集成、发布管理以及部署流水线。它对交付团队内部的协作也会起到巨大的促进作用"
-date: 2018-3-9
+date: 2018-3-11
 tags: [持续交付]
 comments: true
 share: true
